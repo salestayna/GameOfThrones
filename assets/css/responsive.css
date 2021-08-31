@@ -1,0 +1,55 @@
+@media (max-width: 1200px) {
+	.grid {
+		grid-template-columns: 388px;
+	}
+
+	.families__list, 
+	.characters__list {
+		height: auto;
+	}
+}
+
+@media (max-width: 992px) {
+	header {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	header span {
+		display: block;
+		margin-top: 18px;
+	}
+
+	header span::before {
+		margin-left: 0px;
+		width: 0px;
+		height: 0px;
+		margin-right: 0px;
+		margin-top: 18px;
+	}
+
+	.character {
+		width: auto;
+	}
+
+	.character__close {
+		display: block;
+	}
+}
+
+@media (max-width : 480px) {
+	header {
+		align-items: center;
+		padding-left: 18px;
+		padding-right: 18px;
+	}
+
+	main {
+		padding-left: 18px;
+		padding-right: 18px;
+	}
+
+	.grid {
+		grid-template-columns: auto;
+	}
+}

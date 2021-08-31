@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+	font-family: cursive;
+}
+
+ul {
+	list-style: none;
+}
+
+body {
+	background-image: url(../images/img-bg.png);
+	height: 100%;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	padding-top: 54px;
+	padding-left: 86px;
+	padding-bottom: 86px;
+}
+
+header span {
+	color: #FFFFFF;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 12px;
+	letter-spacing: 4px;
+	display: flex;
+	align-items: center;
+}
+
+header span::before {
+	display: inline-block;
+	content: '';
+	background-color: #FFFFFF;
+	margin-left: 38px;
+	width: 1px;
+	height: 30px;
+	margin-right: 38px;
+}
+
+main {
+	padding-left: 86px;
+	padding-right: 86px;
+	padding-bottom: 52px;
+}
+
+h2 {
+	color: #444444;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 12px;
+	letter-spacing: 4px;
+	margin-bottom: 28px;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 388px 388px;
+	grid-gap: 70px;
+}
+
+.families__list,
+.characters__list {
+	color: #FFFFFF;
+	background-color: #151515;
+	padding-top: 18px;
+	padding-bottom: 18px;
+	padding-left: 20px;
+	padding-right: 20px;
+	height: 100vh;
+}
+
+.characters {
+	display: none;
+	opacity: 0;
+}
+
+.characters--active {
+	display: block;
+	opacity: 1;
+}
+
+.families__list li,
+.characters__list li {
+	background-color: #222222;
+	border: 1px solid #222222;
+	display: flex;
+	align-items: center;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 26px;
+	padding-right: 26px;
+	font-weight: 600;
+	font-size: 14px;
+	margin-bottom: 16px;
+	cursor: pointer;
+}
+
+.families__list li.active,
+.characters__list li.active {
+	background-color: #DEDEDE;
+	color: #414141;
+	box-shadow: 0px 8px 12px 4px rgba(0, 0, 0, 0.05);
+}
+
+.families__list li:last-child,
+.characters__list li:last-child {
+	margin-bottom: 0px;
+}
+
+.families__list li img,
+.characters__list li img {
+	margin-right: 20px;
+}
+
+.characters__list li img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.characters__title {
+	display: block;
+	padding-top: 8px;
+	color: #868686;
+	font-weight: 600;
+	font-size: 12px;
+}
+
+.character {
+	display: block;
+	height: 100%;
+	width: 25%;
+	position: fixed; 
+	z-index: 1;
+	top: 0;
+	right: 0;
+	overflow: hidden;
+	background-color: #151515;
+	padding-top: 70px;
+	padding-left: 60px;
+	padding-right: 60px;
+	text-align: center;
+}
+
+.character__details {
+	display: none;
+}
+
+.character__details--active {
+	display: block;
+	animation: show-right .5s forwards;
+}
+
+@keyframes show-right {
+	from {
+		opacity: 0;
+		transform: translate3d(25px, 0, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+.character__close {
+	display: none;
+}
+
+.character__close svg {
+	width: 18px;
+	margin-bottom: 12px;
+}
+
+.character__image {
+	width: 193px;
+	height: 261px;
+	border: 2px solid #FFFFFF;
+	object-fit: cover;
+	margin-top: 58px;
+}
+
+.character__name {
+	font-size: 22px;
+	color: #FFFFFF;
+	/*font-family: Georgia;*/
+	font-weight: 400;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	position: relative;
+}
+
+.character__name::before {
+	content: url(../images/floral.png);
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -16px;
+}
+
+.character__title {
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: 400;
+	margin-bottom: 28px;
+}
+
+.character__quote {
+	color: #FFFFFF;
+	font-family: Garamond;
+	font-style: italic;
+	font-size: 20px;
+	position: relative;
+}
+
+.character__quote::before {
+	content: '“';
+	color: #000000;
+	font-size: 62px;
+	font-family: Georgia;
+	font-style: normal;
+	position: absolute;
+	top: -40px;
+	left: 0;
+}
+
